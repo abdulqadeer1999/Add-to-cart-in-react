@@ -27,7 +27,7 @@ function App() {
        
         <button type="button" class="btn btn-danger"onClick = {sub} > - </button>
         <br />
-        {value}
+         <h5> Quantity = {value}    </h5>
         <br />
        
         <button type="button" class="btn btn-primary" onClick= {add} > + </button>
