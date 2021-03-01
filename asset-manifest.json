@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Add-to-cart-in-react/static/css/main.1f07d724.chunk.css",
+    "main.js": "/Add-to-cart-in-react/static/js/main.70a1e1c6.chunk.js",
+    "main.js.map": "/Add-to-cart-in-react/static/js/main.70a1e1c6.chunk.js.map",
+    "runtime-main.js": "/Add-to-cart-in-react/static/js/runtime-main.a69cccf8.js",
+    "runtime-main.js.map": "/Add-to-cart-in-react/static/js/runtime-main.a69cccf8.js.map",
+    "static/css/2.150d169a.chunk.css": "/Add-to-cart-in-react/static/css/2.150d169a.chunk.css",
+    "static/js/2.b3c55b11.chunk.js": "/Add-to-cart-in-react/static/js/2.b3c55b11.chunk.js",
+    "static/js/2.b3c55b11.chunk.js.map": "/Add-to-cart-in-react/static/js/2.b3c55b11.chunk.js.map",
+    "static/js/3.0a571d20.chunk.js": "/Add-to-cart-in-react/static/js/3.0a571d20.chunk.js",
+    "static/js/3.0a571d20.chunk.js.map": "/Add-to-cart-in-react/static/js/3.0a571d20.chunk.js.map",
+    "index.html": "/Add-to-cart-in-react/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/Add-to-cart-in-react/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.1f07d724.chunk.css.map": "/Add-to-cart-in-react/static/css/main.1f07d724.chunk.css.map",
+    "static/js/2.b3c55b11.chunk.js.LICENSE.txt": "/Add-to-cart-in-react/static/js/2.b3c55b11.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a69cccf8.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.b3c55b11.chunk.js",
+    "static/css/main.1f07d724.chunk.css",
+    "static/js/main.70a1e1c6.chunk.js"
+  ]
+}
