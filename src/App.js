@@ -39,6 +39,7 @@ function App() {
 var i = {
   price : product[index].price,
   tittle : product[index].title,
+  imgaeUrl : product[index].imgaeUrl
   
 }
   setCart([...cart,i])
