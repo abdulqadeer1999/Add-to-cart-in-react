@@ -6,45 +6,83 @@ import { useState } from 'react'
 
 function App() {
 
-  const [value, setValue] = useState(0)
+  const [cart, setCart] = useState([])
+  const [product, setproduct] = useState([
+    {
+      title: "sweet",
+      price: "200",
+      imgaeUrl: "https://u5j4h3u7.stackpathcdn.com/pub/media/catalog/product/cache/172d96e30d7cd3d4380b53391edef300/3/0/303395.jpg"
+    },
+    {
+      title: 'sweet2',
+      price: "100",
+      imgaeUrl: "https://u5j4h3u7.stackpathcdn.com/pub/media/catalog/product/cache/172d96e30d7cd3d4380b53391edef300/3/0/303395.jpg"
+    },
+    {
+      title: "sweet3",
+      price: "50",
+      imgaeUrl: "https://u5j4h3u7.stackpathcdn.com/pub/media/catalog/product/cache/172d96e30d7cd3d4380b53391edef300/3/0/303395.jpg "
+    }
+  ])
 
-  function add() {
-    setValue(value + 1)
-  }
-  function sub() {
-    setValue(value - 1)
+
+
+  // function add() {
+  //   setValue(value + 1)
+  // }
+  // function sub() {
+  //   setValue(value - 1)
+
+  // }
+
+  function addcart(index) {
+var i = {
+  price : product[index].price,
+  tittle : product[index].title,
+  
+}
+  setCart([...cart,i])
+  console.log(cart)
 
   }
+
+
+
   return (
-    <div>
+    <>
 
-      <div className="cart1">
-        
+      { product.map((value, index) => (
+        <div key={index}>
+          <h5>{value.title}</h5>
+          <h5>{value.price} </h5>
+          <img src={value.imgaeUrl} className="cart2" alt="sweet" />
 
-        <br />
-        <br />
-        
-       
-        <button type="button" class="btn btn-danger"onClick = {sub} > - </button>
-        <br />
-         <h5> Quantity = {value}    </h5>
-        <br />
-       
-        <button type="button" class="btn btn-primary" onClick= {add} > + </button>
-        <br />
-        <br />
-        <div className="cart2">
-          <img width="250px" src="https://u5j4h3u7.stackpathcdn.com/pub/media/catalog/product/cache/172d96e30d7cd3d4380b53391edef300/3/0/303395.jpg" alt="sweets" /> <br />
-         
-   
-          <button type="button" class="btn btn-outline-success" onClick = {add}>Add To Cart</button>
+          <br />
+          <br />
+
+
+
+          <button type="button" class="btn btn-outline-success" onClick={ () => addcart(index)}>Add To Cart</button>
 
         </div>
-      </div>
-    </div>
+      ))}
+       <div>
+      { cart.map((value, index) => (
+        <div key={index}>
+          <h5>{value.title}</h5>
+          <h5>{value.price} </h5>
+         
+
+       </div>
+ ))}
+          </div>
+         
 
 
-  );
+
+    </>
+  )
 }
+
 
 export default App;
