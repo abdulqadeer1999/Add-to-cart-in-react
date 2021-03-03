@@ -33,12 +33,11 @@ function App() {
   function add() {
     setValue(value + 1)
   }
-  function sub() {
+  const sub = () => {
 
-    setValue(value)
-  if( value.visible === 1){
-    setValue({value : "block"})
-  }
+  if(value === 1) return;
+  const newValue = value-1
+  setValue (newValue)
   }
 
   function addcart(index) {
@@ -61,17 +60,20 @@ var add = {
 
       { product.map((value, index) => (
         <div key={index}>
+          <div className = "cart3">
           <h5>{value.title}</h5>
           <h5>{value.price} </h5>
           <h5>{value.id}</h5>
+          
           <img src={value.imgaeUrl} className="cart2" alt="sweet" />
+          </div>
 
           <br />
           <br />
 
 
 
-          <button type="button" class="btn btn-outline-success" onClick={ () => addcart(index)}>Add To Cart</button>
+          <button style = {{marginRight:"200px"}} type="button" class="btn btn-outline-success" onClick={ () => addcart(index)}>Add To Cart</button>
 
         </div>
       ))}
