@@ -7,7 +7,7 @@ import { useState } from 'react'
 function App() {
   const [value , setValue] = useState(1)
   const [cart, setCart] = useState([])
-  const [product, setproduct] = useState([
+  const [product] = useState([
     {
       title: "sweet1",
       price: "200",
@@ -30,7 +30,7 @@ function App() {
 
 
 
-  function add() {
+  const  add = () => {
     setValue(value + 1)
   }
   const sub = () => {
@@ -40,18 +40,22 @@ function App() {
   setValue (newValue)
   }
 
-  function addcart(index) {
-var add = {
-  tittle : product[index].title,
-  price : product[index].price,
-  id : product[index].id,
-  imgaeUrl : product[index].imgaeUrl,
-  
-}
-  setCart([...cart,add])
-  console.log(cart)
+  function addcart(value) {
 
-  }
+var add = cart.find((cart) => cart.id === value.id)
+if(add === undefined) {
+setCart([...cart,value])
+  
+} 
+
+
+  else  {
+  alert ('cart already exist')
+}
+  // setCart([...cart,add])
+  // console.log(cart)
+
+}
 
 
 
@@ -64,8 +68,8 @@ var add = {
           <h5>{value.title}</h5>
           <h5>{value.price} </h5>
           <h5>{value.id}</h5>
-          
           <img src={value.imgaeUrl} className="cart2" alt="sweet" />
+         
           </div>
 
           <br />
@@ -73,7 +77,7 @@ var add = {
 
 
 
-          <button style = {{marginRight:"200px"}} type="button" class="btn btn-outline-success" onClick={ () => addcart(index)}>Add To Cart</button>
+          <button style = {{marginRight:"200px"}} type="button" className="btn btn-outline-success" onClick={ () => addcart(value)}>Add To Cart</button>
 
         </div>
       ))}
@@ -83,8 +87,9 @@ var add = {
           <h5>{event.title}</h5>
           <h3> price = {event.price} </h3>
           <h5> id = {event.id}</h5>
-          <button onClick = {add}  >+</button> {value}
-          <button onClick = {sub}  >-</button> 
+          <button type="button" className="btn btn-success"onClick = {add} >+</button> Qunatity = {value}
+          <button type="button" className="btn btn-danger"onClick = {sub} >-</button>
+                                               
          
          
 
