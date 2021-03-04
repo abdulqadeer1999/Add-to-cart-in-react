@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react'
 
 function App() {
-  const [value , setValue] = useState(1)
+  const [value,setValue] = useState(1)
   const [cart, setCart] = useState([])
   const [product] = useState([
     {
@@ -58,6 +58,43 @@ setCart([...cart,value])
 }
 
 
+// function increment (value) {
+//   var increase =  cart.find((cart) => cart.id === value.id)
+//   console.log("matched",increase)
+
+//   //  setValue(value +1)
+  
+  
+//   if (increment) {
+//     setCart(
+//       cart.map((cart) => 
+//       cart.id  === value.id ? {...increase ,quantity : increase.quantity + 1} :cart
+      
+//       )
+      
+//     )
+    
+//   }
+
+
+// }
+
+// function decrease (value) {
+
+ 
+
+//   var decri = cart.find((cart) => cart.id === value.id)
+//   if(decri) {
+//     setCart(
+//       cart.map((cart) => 
+//       cart.id === value.id ? {...decri,quantity : decri.quantity -1 }:cart
+      
+//       )
+//     )
+//   }
+
+// }
+
 
   return (
     <>
@@ -88,10 +125,8 @@ setCart([...cart,value])
           <img src = {event.imgaeUrl} style = {{width : "200px"}} alt ="sweet" className = "cart2" />
           <h3> price = {event.price} </h3>
           <h5> id = {event.id}</h5>
-
-          <button type="button" className="btn btn-success"onClick = {add} >+</button> Qunatity = {value}
-          <button type="button" className="btn btn-danger"onClick = {sub} >-</button>
-                                               
+<button onClick = {add}>+</button> {value}
+<button onClick = {sub}>-</button> 
          
          
 
