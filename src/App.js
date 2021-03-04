@@ -50,7 +50,7 @@ setCart([...cart,value])
 
 
   else  {
-  alert ('cart already exist')
+  alert ('cart already exist')   
 }
   // setCart([...cart,add])
   // console.log(cart)
@@ -85,8 +85,10 @@ setCart([...cart,value])
       { cart.map((event, index) => (
         <div key={index}>
           <h5>{event.title}</h5>
+          <img src = {event.imgaeUrl} style = {{width : "200px"}} alt ="sweet" className = "cart2" />
           <h3> price = {event.price} </h3>
           <h5> id = {event.id}</h5>
+
           <button type="button" className="btn btn-success"onClick = {add} >+</button> Qunatity = {value}
           <button type="button" className="btn btn-danger"onClick = {sub} >-</button>
                                                
